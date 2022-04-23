@@ -3,7 +3,7 @@
 Welcome to the Team_quick_gallery wiki!
 
 Should be done:
-- [*] Setup API calls through Axios for getting objects of culture=Afghan
+- [x] Tony: Setup API calls through Axios for getting objects of culture=Afghan
 - [ ] Irina: Create a new web component for gallery-cards (at least an <img> tag with src, or background image attribute), something like a "GalleryCard" class with render() method.
 - [ ] Irina: Update the main page a bit more, so there's a central gallery tile section.
 - [ ] Irina: Have it so that the central gallery tile section has one GalleryCard, and image source could be anything
