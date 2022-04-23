@@ -1,4 +1,5 @@
 let culture = 37525950;
+let allCultures = [];
 let allImageUrl = [];
 
 /**
