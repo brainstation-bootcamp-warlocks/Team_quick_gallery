@@ -1,0 +1,240 @@
+{
+    "info": {
+        "totalrecordsperquery": 10,
+        "totalrecords": 24,
+        "pages": 3,
+        "page": 1,
+        "next": "https://api.harvardartmuseums.org/object?culture=37525950&apikey=6205a0f6-7380-42b6-9a01-272d7c020f4f&page=2"
+    },
+    "records": [
+        {
+            "copyright": null,
+            "contextualtextcount": 0,
+            "creditline": "Harvard Art Museums/Arthur M. Sackler Museum, Acquired with a fund established by Ernest B. and Helen Pratt Dane for the purchase of Asian art in memory of Benjamin Rowland Jr.",
+            "accesslevel": 1,
+            "dateoflastpageview": "2021-12-20",
+            "classificationid": 30,
+            "division": "Asian and Mediterranean Art",
+            "markscount": 0,
+            "publicationcount": 1,
+            "totaluniquepageviews": 90,
+            "contact": "am_asianmediterranean@harvard.edu",
+            "colorcount": 9,
+            "rank": 102648,
+            "state": null,
+            "id": 201655,
+            "verificationleveldescription": "Adequate. Object is adequately described but information may not be vetted",
+            "period": "Kushan period, c.100 BCE-250 CE",
+            "images": [
+                {
+                    "date": "2013-06-27",
+                    "copyright": "President and Fellows of Harvard College",
+                    "imageid": 427981,
+                    "idsid": 47014819,
+                    "format": "image/jpeg",
+                    "description": null,
+                    "technique": null,
+                    "renditionnumber": "DDC251266",
+                    "displayorder": 1,
+                    "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:DDC251266_dynmc",
+                    "alttext": null,
+                    "width": 612,
+                    "publiccaption": null,
+                    "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/47014819",
+                    "height": 1024
+                },
+                {
+                    "date": "2013-06-27",
+                    "copyright": "President and Fellows of Harvard College",
+                    "imageid": 427982,
+                    "idsid": 47014820,
+                    "format": "image/jpeg",
+                    "description": null,
+                    "technique": null,
+                    "renditionnumber": "DDC251267",
+                    "displayorder": 2,
+                    "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:DDC251267_dynmc",
+                    "alttext": null,
+                    "width": 664,
+                    "publiccaption": null,
+                    "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/47014820",
+                    "height": 1024
+                },
+                {
+                    "date": "2013-06-27",
+                    "copyright": "President and Fellows of Harvard College",
+                    "imageid": 427983,
+                    "idsid": 47014821,
+                    "format": "image/jpeg",
+                    "description": null,
+                    "technique": null,
+                    "renditionnumber": "DDC251268",
+                    "displayorder": 3,
+                    "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:DDC251268_dynmc",
+                    "alttext": null,
+                    "width": 604,
+                    "publiccaption": null,
+                    "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/47014821",
+                    "height": 1024
+                },
+                {
+                    "date": null,
+                    "copyright": "President and Fellows of Harvard College",
+                    "imageid": 14847,
+                    "idsid": 20863476,
+                    "format": "image/jpeg",
+                    "description": null,
+                    "technique": "Kodak Super XX",
+                    "renditionnumber": "16657",
+                    "displayorder": 4,
+                    "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:VRS16657_dynmc",
+                    "alttext": null,
+                    "width": 818,
+                    "publiccaption": "Left: 1981.24; Right: 1981.23",
+                    "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/20863476",
+                    "height": 1024
+                },
+                {
+                    "date": null,
+                    "copyright": "President and Fellows of Harvard College",
+                    "imageid": 4439,
+                    "idsid": 20671509,
+                    "format": "image/jpeg",
+                    "description": null,
+                    "technique": "Kodak Super XX",
+                    "renditionnumber": "16658",
+                    "displayorder": 5,
+                    "baseimageurl": "https://nrs.harvard.edu/urn-3:HUAM:VRS16658_dynmc",
+                    "alttext": null,
+                    "width": 819,
+                    "publiccaption": null,
+                    "iiifbaseuri": "https://ids.lib.harvard.edu/ids/iiif/20671509",
+                    "height": 1024
+                }
+            ],
+            "worktypes": [
+                {
+                    "worktypeid": "141",
+                    "worktype": "figure"
+                },
+                {
+                    "worktypeid": "330",
+                    "worktype": "sculpture"
+                }
+            ],
+            "imagecount": 5,
+            "totalpageviews": 112,
+            "accessionyear": 1981,
+            "standardreferencenumber": null,
+            "signed": null,
+            "classification": "Sculpture",
+            "relatedcount": 0,
+            "verificationlevel": 2,
+            "primaryimageurl": "https://nrs.harvard.edu/urn-3:HUAM:DDC251266_dynmc",
+            "titlescount": 1,
+            "peoplecount": 0,
+            "style": null,
+            "lastupdate": "2022-04-23T05:33:18-0400",
+            "commentary": null,
+            "periodid": 2163,
+            "technique": "Stucco",
+            "edition": null,
+            "description": null,
+            "medium": "Stucco with traces of polychrome; Gandharan style, perhaps from Hadda, Afghanistan",
+            "lendingpermissionlevel": 0,
+            "title": "Standing Female Donor",
+            "accessionmethod": "Purchase",
+            "colors": [
+                {
+                    "color": "#afafaf",
+                    "spectrum": "#8c5fa8",
+                    "hue": "Grey",
+                    "percent": 0.7089138576779026,
+                    "css3": "#a9a9a9"
+                },
+                {
+                    "color": "#7d7d64",
+                    "spectrum": "#6cbd45",
+                    "hue": "Yellow",
+                    "percent": 0.1349063670411985,
+                    "css3": "#808080"
+                },
+                {
+                    "color": "#c8af96",
+                    "spectrum": "#e66c64",
+                    "hue": "Brown",
+                    "percent": 0.06779026217228465,
+                    "css3": "#d2b48c"
+                },
+                {
+                    "color": "#af967d",
+                    "spectrum": "#c25687",
+                    "hue": "Brown",
+                    "percent": 0.06696629213483146,
+                    "css3": "#bc8f8f"
+                },
+                {
+                    "color": "#e1c8af",
+                    "spectrum": "#e9715f",
+                    "hue": "Orange",
+                    "percent": 0.012284644194756554,
+                    "css3": "#f5deb3"
+                },
+                {
+                    "color": "#4b4b32",
+                    "spectrum": "#4ab851",
+                    "hue": "Green",
+                    "percent": 0.005393258426966292,
+                    "css3": "#556b2f"
+                },
+                {
+                    "color": "#e1e1c8",
+                    "spectrum": "#e9715f",
+                    "hue": "Green",
+                    "percent": 0.002546816479400749,
+                    "css3": "#dcdcdc"
+                },
+                {
+                    "color": "#323219",
+                    "spectrum": "#3db657",
+                    "hue": "Brown",
+                    "percent": 0.0009737827715355805,
+                    "css3": "#2f4f4f"
+                },
+                {
+                    "color": "#643219",
+                    "spectrum": "#59ba4a",
+                    "hue": "Brown",
+                    "percent": 0.00022471910112359551,
+                    "css3": "#8b4513"
+                }
+            ],
+            "provenance": null,
+            "groupcount": 0,
+            "dated": "3rd-4th century",
+            "department": "Department of Asian Art",
+            "dateend": 399,
+            "url": "https://www.harvardartmuseums.org/collections/object/201655",
+            "dateoffirstpageview": "2009-05-26",
+            "century": "3rd-4th century CE",
+            "objectnumber": "1981.23",
+            "labeltext": null,
+            "datebegin": 200,
+            "culture": "Afghan",
+            "exhibitioncount": 2,
+            "imagepermissionlevel": 0,
+            "mediacount": 0,
+            "objectid": 201655,
+            "techniqueid": 2522,
+            "dimensions": "H. 36 x W. 10 x D. 8 cm (14 3/16 x 3 15/16 x 3 1/8 in.)",
+            "seeAlso": [
+                {
+                    "id": "https://iiif.harvardartmuseums.org/manifests/object/201655",
+                    "type": "IIIF Manifest",
+                    "format": "application/json",
+                    "profile": "http://iiif.io/api/presentation/2/context.json"
+                }
+            ]
+        }
+    ]
+}
