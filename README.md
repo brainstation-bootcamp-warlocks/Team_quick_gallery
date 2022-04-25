@@ -10,6 +10,6 @@ Should be done:
 - [ ] Tony: BIG POINT: Integrate the new GalleryCard with the list of gallery objects (e.g. have a main flexbox div where it has a bunch of GalleryCard objects where each object has a different image source).
 
 Nice to have:
-- [ ] Tony: Have a dropdown wheel that gets populated by criteria (e.g. culture), and fill it up.
-- [ ] Tony: Have it so that the dropdown wheel selection updates the selected culture variable.
+- [x] Tony: Have a dropdown wheel that gets populated by criteria (e.g. culture), and fill it up.
+- [x] Tony: Have it so that the dropdown wheel selection updates the selected culture variable.
 - [ ] Tony: Have it so that we can actually get more pages

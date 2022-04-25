@@ -1,24 +1,33 @@
-let culture = 37525950;
+let culture;
 let allCultures = [];
 let allImageUrl = [];
+let dropdownCulture;
 
 /**
  * When called, will request for a list of objects from the server.
  */
  function requestGalleryObjects() {
 
-    
+    culture = dropdownCulture.getSelectedCultureId();
+
     axios.get('https://api.harvardartmuseums.org/object', 
     {
+        // Note: "classification": 26 is "Painting"
         params: {
             "apikey": '6205a0f6-7380-42b6-9a01-272d7c020f4f',
             "culture": culture,
+            "hasimage": 1
         }
     }).then(response => {
-
         const foundGalleryObjects = response.data;
+
+        console.log(foundGalleryObjects);
+
         foundGalleryObjects.records.forEach( record => {
-            allImageUrl.push(record.images[0].baseimageurl);
+
+            if (record.primaryimageurl) {
+                allImageUrl.push(record.primaryimageurl);
+            }
         });
 
         console.log(allImageUrl);
@@ -30,3 +39,5 @@ let allImageUrl = [];
 }
 
 document.getElementById("getArt").addEventListener("click", requestGalleryObjects);
+
+dropdownCulture = new DropdownCulture(document.getElementById("culture-select"));
