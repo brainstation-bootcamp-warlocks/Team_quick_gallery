@@ -51,9 +51,9 @@ class GalleryCard {
     render (){
         return `
         <section class="gallery">
-            <div class="card">
-                Here you will see pretty art
-            </div>
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
         </section>
         `
     }
@@ -66,9 +66,7 @@ class Gallery {
 
     render () {
         return `
-        
             ${this.galleryCard.render()}
-        
         `
     }
 }
@@ -76,3 +74,4 @@ class Gallery {
 let galleryField = document.getElementById('gallery');
 let gallery = new Gallery;
 galleryField.innerHTML = gallery.render();
+
