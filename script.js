@@ -41,3 +41,38 @@ let dropdownCulture;
 document.getElementById("getArt").addEventListener("click", requestGalleryObjects);
 
 dropdownCulture = new DropdownCulture(document.getElementById("culture-select"));
+
+// Web components
+
+class GalleryCard {
+    constructor() {
+
+    }
+    render (){
+        return `
+        <section class="gallery">
+            <div class="card">
+                Here you will see pretty art
+            </div>
+        </section>
+        `
+    }
+}
+
+class Gallery {
+    constructor() {
+        this.galleryCard = new GalleryCard;
+    }
+
+    render () {
+        return `
+        
+            ${this.galleryCard.render()}
+        
+        `
+    }
+}
+
+let galleryField = document.getElementById('gallery');
+let gallery = new Gallery;
+galleryField.innerHTML = gallery.render();

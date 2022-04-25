@@ -1,14 +1,34 @@
+html {
+    background-color: antiquewhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
 header {
-    font-size: 10rem;
+    font-size: 7rem;
+    margin: 3rem;
     
 
 }
 
-html {
-    background-color: antiquewhite;
-}
 
 button {
     height: 3rem;
     font-size: 2rem;
+}
+
+
+.gallery {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2 rem;
+}
+
+.card {
+    height: 10rem;
+    width: 10rem;
+    background-image: linear-gradient(to top, antiquewhite , white);
+    margin: 2 rem;
 }
