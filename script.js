@@ -1,21 +1,43 @@
-// create a global variable for the api key:
-const apiKey = "8d993ff2-370d-4e97-8167-4168a5c74070";
+let culture;
+let allCultures = [];
+let allImageUrl = [];
+let dropdownCulture;
 
-// retrieve comments using the key: 
-const artURL = '?api_key=https://api.harvardartmuseums.org/gallery/1220'+apiKey;
+/**
+ * When called, will request for a list of objects from the server.
+ */
+ function requestGalleryObjects() {
 
-console.log(artURL)
+    culture = dropdownCulture.getSelectedCultureId();
 
-let artImages = document.getElementById('gallery');
+    axios.get('https://api.harvardartmuseums.org/object', 
+    {
+        // Note: "classification": 26 is "Painting"
+        params: {
+            "apikey": '6205a0f6-7380-42b6-9a01-272d7c020f4f',
+            "culture": culture,
+            "hasimage": 1
+        }
+    }).then(response => {
+        const foundGalleryObjects = response.data;
 
-// function for API communication:
-function artFetch () {
-    return axios.get(artURL).then((response) => {
-    console.log(response)
-    
-    const artArray = response.data;
-    return artArray;
-    
-});
+        console.log(foundGalleryObjects);
+
+        foundGalleryObjects.records.forEach( record => {
+
+            if (record.primaryimageurl) {
+                allImageUrl.push(record.primaryimageurl);
+            }
+        });
+
+        console.log(allImageUrl);
+
+    }).catch(error => {
+        console.error ("Failed to receive objects from API.");
+        console.error (error);
+    });
 }
 
+document.getElementById("getArt").addEventListener("click", requestGalleryObjects);
+
+dropdownCulture = new DropdownCulture(document.getElementById("culture-select"));
