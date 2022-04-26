@@ -1,14 +1,52 @@
+html {
+    background-color: antiquewhite;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+
+}
+
+
 header {
-    font-size: 10rem;
+    font-size: 7rem;
+    margin: 3rem;
+    text-align: center;
     
 
 }
 
-html {
-    background-color: antiquewhite;
+main {
+    display: flex;
+    flex-direction: column;
+    padding: 2rem;
+    align-items: center;
+
+}
+
+#culture-dropdown-selector {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 1rem;
 }
 
 button {
     height: 3rem;
-    font-size: 2rem;
+    width: 11.5rem;
+    font-size: 1rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin: 2rem;
+}
+
+
+.gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    margin: 2 rem;
+}
+
+.card {
+    height: 10rem;
+    width: 10rem;
+    background-image: linear-gradient(to top, antiquewhite , white);
+    margin: 1rem;
+    
 }

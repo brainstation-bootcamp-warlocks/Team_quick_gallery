@@ -41,3 +41,48 @@ let dropdownCulture;
 document.getElementById("getArt").addEventListener("click", requestGalleryObjects);
 
 dropdownCulture = new DropdownCulture(document.getElementById("culture-select"));
+
+// Web components
+
+class GalleryCard {
+    constructor() {
+
+    }
+    render (){
+        return `
+        <section class="gallery">
+            <div class="card"></div>
+            <div class="card"></div>
+            <div class="card"></div>
+        </section>
+        `
+    }
+}
+
+class Gallery {
+    constructor() {
+        this.galleryCard = new GalleryCard;
+    }
+
+    render () {
+        return `
+            ${this.galleryCard.render()}
+        `
+    }
+}
+
+let galleryField = document.getElementById('gallery');
+let gallery = new Gallery;
+galleryField.innerHTML = gallery.render();
+
+// render images on the page
+const cardItem = document.querySelector('card');
+
+function displayArt () {
+    for (var i = 0; 1 < allImageUrl.length; i++) {
+        cardItem.innerHTML = allImageUrl[i];
+        // return;
+    }
+}
+
+displayArt (allImageUrl);
