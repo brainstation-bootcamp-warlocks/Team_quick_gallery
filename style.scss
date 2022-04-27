@@ -50,7 +50,7 @@ body {
     justify-content: space-evenly;
 }
 
-  #culture-dropdown-selector {
+  #department-dropdown-selector {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1.5rem;
     
@@ -76,24 +76,25 @@ body {
   .card {
     display: flex;
     flex-direction: column;
-    height: 10rem;
+    //height: 10rem;
     width: 10rem;
     padding: 3rem;
     border: white solid 1px;
     margin: 1rem;
     
-    -o-object-fit: cover;
-       object-fit: cover;
-       &__image {
-           height: 11rem;
-        //    background-image: linear-gradient(to top, rgb(58, 55, 55), white);
-        
-       }
+    object-fit: cover;
 
-       &__info {
-           color: white;
+    &__image {
+      width: 10rem;
+      // height: 11rem;
+    //    background-image: linear-gradient(to top, rgb(58, 55, 55), white);
+    
+    }
 
-       }
+    &__info {
+        color: white;
+
+    }
   }
   
 
