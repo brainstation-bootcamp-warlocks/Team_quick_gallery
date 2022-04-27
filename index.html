@@ -9,30 +9,32 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     </head>
     <body>
-        <header id="header">
-            <div class="logo-wrapper" >
-                <a class="link" href="https://www.metmuseum.org/">
-                    <img class="logo" src="./Assets/metropolitan-art-museum-logo-3B8686F789-seeklogo.com.png">
+        <header class="logo">
+            <div class="logo__wrapper" >
+                <a class="logo__link" href="https://www.metmuseum.org/">
+                    <img class="logo__image" src="./Assets/metropolitan-art-museum-logo-3B8686F789-seeklogo.com.png">
                 </a>
-            </div>
-            <div class="title"> Random art gallery</div>
-           
+            </div>           
         </header>
+        <div class="hero">
+            <img class="hero__image" src="./Assets/TheMet.jpg" alt="old black and white photo of the Met">
+            <div class="hero__title">Random art gallery</div>
+        </div>
         <main>
-            <div id="department-select"></div>
-            <button id="getArt">Click me to see random art!</button>
-            <div class="gallery-wrapper">
-                <section id="gallery">
-                    <div class="card">
-                        <div class="image">image will be here</div>
-                        <div class="info">
-                            <p id="title">title</p>
-                            <p id="year">year</p>
-                            <p id="artist">artist</p>
-                        </div>
-                    </div>
-                </section>
+            <div class="selection">
+                <div id="culture-select"></div>
+                <button id="getArt">Select</button>
             </div>
+            <section id="gallery">
+                <div class="card">
+                    <div class="card__image"></div>
+                    <div class="card__info">
+                        <p id="card__info--title">title</p>
+                        <p id="card__info--year">year</p>
+                        <p id="card__info--artist">artist</p>
+                    </div>
+                </div>
+            </section>
         </main>            
 
         <script src="./scripts/components/Gallery.js"></script>
