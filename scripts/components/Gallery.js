@@ -70,22 +70,24 @@ class GalleryCard {
     render = () => {
 
         /* // Irina's Template
-        <div class="card">
-            <div class="image">image will be here</div>
-            <div class="info">
-                <p id="title">title</p>
-                <p id="year">year</p>
-                <p id="artist">artist</p>
+        <section id="gallery">
+            <div class="card">
+                <div class="card__image"></div>
+                <div class="card__info">
+                    <p id="card__info--title">title</p>
+                    <p id="card__info--year">year</p>
+                    <p id="card__info--artist">artist</p>
+                </div>
             </div>
-        </div> */
+        </section> */
 
         return `
         <div class="card">
-            <img class="card" src="${this.primaryImageSmall}">
-            <div class="info">
-                <p id="title">${this.title}</p>
-                <p id="year">${this.objectDate}</p>
-                <p id="artist">${this.artistDisplayName}</p>
+            <img class="card__image" src="${this.primaryImageSmall}">
+            <div class="card__info">
+                <p id="card__info--title">${this.title}</p>
+                <p id="card__info--year">${this.objectDate}</p>
+                <p id="card__info--artist">${this.artistDisplayName}</p>
             </div>
         </div>`;
     }
@@ -134,9 +136,7 @@ class Gallery {
 
     render = () => {
         this.parentContainerDOM.innerHTML = `
-        <div class="gallery">
             ${this.renderCards()}
-        </div>
         `;
     }
 }
