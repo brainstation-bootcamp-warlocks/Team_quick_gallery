@@ -16,11 +16,11 @@ let gallery;
 
     axios.get('https://collectionapi.metmuseum.org/public/collection/v1/search', 
     {
+        // Note: for some reason, the params must be in this ordering, with 'q' at the end
         params: {
-            "q": '',
-            "hasImages": true,
-            "isPublicDomain": true,
-            "departmentId": departmentId
+            "departmentId": departmentId,
+            "hasImage": true,
+            "q": "\"\"",
         }
     }).then( response => {
         const searchTotalRecords = response.data.total;
@@ -28,7 +28,6 @@ let gallery;
 
         // Now that we have the URLs for the gallery, populate and render them.
         gallery.populate(searchObjectIDs);
-        gallery.render();
         
     }).catch(error => {
         console.error ("Failed to receive objects from API.");
