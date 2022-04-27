@@ -48,5 +48,5 @@ button {
     width: 10rem;
     background-image: linear-gradient(to top, antiquewhite , white);
     margin: 1rem;
-    
+    object-fit: cover;
 }
