@@ -1,0 +1,5 @@
+#Ignore scss map files
+*.css.map
+
+#Ignore the font demonstrator file.
+demo.html
