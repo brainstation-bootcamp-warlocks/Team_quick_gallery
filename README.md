@@ -15,8 +15,8 @@ Nice to have:
 - [ ] Tony: Have it so that we can actually get more pages
 
 Next Stage:
-- [ ] Irina: In the main page, change up styling to resemble the metropolitan art museum page
-- [ ] Irina: In the main page, have a logo (could be the met logo, or a picture)
+- [x] Irina: In the main page, change up styling to resemble the metropolitan art museum page
+- [x] Irina: In the main page, have a logo (could be the met logo, or a picture)
 - [ ] Irina:In the gallery card, have it so that there's title, year, and artist in the bottom. 
 - [ ] Tony: Link to the met api intead of the harvard one
 - [ ] Tony: Have it so that when you click on a card, it links to the actual page.
