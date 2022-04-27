@@ -1,0 +1,80 @@
+.logo {
+    &__wrapper {
+        width: 100%;
+        background-color: #EC012A;
+        height: 7rem;
+    }
+    &__image {
+        margin-left: 5rem;
+        margin-top: 1rem;
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+ 
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    // align-items: center;
+    &__image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.3;
+    }
+    &__title {
+      position: absolute;
+      font-size: 10rem;
+      color: rgb(58, 55, 55);
+      padding-left: 5rem;    
+    }
+  }
+   
+  
+  
+  main {
+    font-family: Arial, Helvetica, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(58, 55, 55);
+  }
+  
+  #culture-dropdown-selector {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+  }
+  
+  button {
+    height: 3rem;
+    width: 11.5rem;
+    font-size: 1rem;
+    font-family: Georgia, "Times New Roman", Times, serif;
+    margin: 2rem;
+  }
+ 
+  
+  .gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    height: 10rem;
+    width: 10rem;
+    background-image: linear-gradient(to top, rgb(58, 55, 55), white);
+    margin: 1rem;
+    -o-object-fit: cover;
+       object-fit: cover;
+  }
+  
+  .image {
+    border: 1px black solid;
+  }
+  
