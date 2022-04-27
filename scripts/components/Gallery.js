@@ -31,6 +31,7 @@ class GalleryCard {
             }
         }).then( (response) => {
 
+            // By just getting something back, we can assume it works. Otherwise, try the 'thumbnail' image
             if (response?.data) {
                 this.primaryImageSmall = `https://collectionapi.metmuseum.org/api/collection/v1/iiif/${this.objectID}/restricted`;
                 resolve();
@@ -38,12 +39,24 @@ class GalleryCard {
                 return axios.get(`https://collectionapi.metmuseum.org/api/collection/v1/iiif/${this.objectID}/thumbnail`);
             }
 
-        }).then( (response) => {
+        })
+        .then( (response) => {
 
-            // By just getting something back, we can assume it works. Otherwise, try the 'thumbnail' image
+            // By just getting something back, we can assume it works. Otherwise, try the 'main-image' image
             if (response?.data) {
                 this.primaryImageSmall = `https://collectionapi.metmuseum.org/api/collection/v1/iiif/${this.objectID}/thumbnail`;
+                resolve();
+            } else {
+                return axios.get(`https://collectionapi.metmuseum.org/api/collection/v1/iiif/${this.objectID}/main-image`);
             }
+
+        }).then( (response) => {
+
+            // By just getting something back, we can assume it works.
+            if (response?.data) {
+                this.primaryImageSmall = `https://collectionapi.metmuseum.org/api/collection/v1/iiif/${this.objectID}/main-image`;
+            }
+
             resolve();
 
         }).catch(error => {
