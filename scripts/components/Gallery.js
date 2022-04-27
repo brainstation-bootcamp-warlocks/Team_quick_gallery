@@ -55,7 +55,26 @@ class GalleryCard {
     }
 
     render = () => {
-        return `<img class="card" src="${this.primaryImageSmall}">`;
+
+        /* // Irina's Template
+        <div class="card">
+            <div class="image">image will be here</div>
+            <div class="info">
+                <p id="title">title</p>
+                <p id="year">year</p>
+                <p id="artist">artist</p>
+            </div>
+        </div> */
+
+        return `
+        <div class="card">
+            <img class="card" src="${this.primaryImageSmall}">
+            <div class="info">
+                <p id="title">${this.title}</p>
+                <p id="year">${this.objectDate}</p>
+                <p id="artist">${this.artistDisplayName}</p>
+            </div>
+        </div>`;
     }
 }
 
