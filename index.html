@@ -4,8 +4,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Document</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Random art gallery</title>
+        <link rel="stylesheet" href="./Styles/mobile-first-styles.css">
         <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.19.2/axios.min.js"></script>
     </head>
     <body>
@@ -17,8 +17,9 @@
             </div>           
         </header>
         <div class="hero">
-            <img class="hero__image" src="./Assets/TheMet.jpg" alt="old black and white photo of the Met">
+            <img class="hero__image" src="./Assets/from-the-archives_teaser_1440x960.jpg" alt="old black and white photo of the Met">
             <div class="hero__title">Random art gallery</div>
+            <div class="hero__subtitle">Enjoy your random selection from more than two million works of art from around the world.<br>The Metropolitan Museum of Art is coming to you today!</div>
         </div>
         <main>
             <div class="selection">
@@ -26,16 +27,21 @@
                 <button id="getArt">Select</button>
             </div>
             <section id="gallery">
-                <div class="card">
+                <div class="card card-hidden">
                     <div class="card__image"></div>
                     <div class="card__info">
-                        <p id="card__info--title">title</p>
-                        <p id="card__info--year">year</p>
-                        <p id="card__info--artist">artist</p>
+                        <p id="card__info--title"></p>
+                        <p id="card__info--year"></p>
+                        <p id="card__info--artist"></p>
                     </div>
                 </div>
             </section>
-        </main>            
+        </main>         
+        <footer class="met-info">
+            For more information about the Metropolitan Museum of Art Collection API, please visit <a href="https://github.com/metmuseum/openaccess">Open Access Github page</a>. 
+            <br>
+            The use of the Metropolitan Museum of Art Collection API is subject to these <a href="https://www.metmuseum.org/information/terms-and-conditions">terms and conditions</a>.
+        </footer>   
 
         <script src="./scripts/components/Gallery.js"></script>
         <script src="./scripts/components/DropdownDepartment.js"></script>

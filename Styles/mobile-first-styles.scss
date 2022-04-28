@@ -1,0 +1,183 @@
+@use './partials/mixins' as *;
+
+body {
+    margin: 0;
+}
+
+.logo {
+    &__wrapper {
+        width: 100%;
+        background-color: #EC012A;
+        height: 3.5rem;
+        @include tablet {
+            height: 7rem;
+          }   
+    }
+    &__image {
+        margin-left: 2rem;
+        margin-top: 0.75rem;
+        width: 2rem;
+        height: 2rem;
+        @include tablet {
+            width: 5rem;
+            height: 5rem;
+            margin-left: 4rem;
+          }  
+    }
+}
+
+ 
+.hero {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+
+    @include tablet {
+        justify-content: center;
+      } 
+    &__image {
+        background-size: cover;
+        background-repeat: no-repeat;
+        opacity: 0.2;
+    }
+    &__title {
+      position: absolute;
+      font-size: 2rem;
+      color: rgb(58, 55, 55);
+      padding-left: 2rem;
+      padding-top: 3rem;
+      @include tablet {
+        font-size: 4rem;
+        padding-left: 4rem;
+        padding-bottom: 3rem;
+      }   
+      @include desktop {
+        font-size: 8rem;
+      }    
+    }
+
+    &__subtitle {
+      position: absolute;
+      font-size: 1rem;
+      top: 45%;
+      padding-left: 2rem;
+      font-style: italic;
+      width: 80%;
+      @include tablet {
+        top: 60%;
+        font-size: 1.5rem;
+        padding-left: 4rem;
+        font-weight: 500;
+        line-height: 3rem;
+      } 
+      @include desktop {
+        font-size: 2.5rem;
+      }
+    }
+  }
+   
+main {
+    font-family: Arial, Helvetica, sans-serif;
+    align-items: center;
+    background-color: rgb(58, 55, 55);
+  }
+  
+.selection {
+    padding: 2rem 0 1rem 0;
+    display: flex;
+    flex-direction: column;  
+    align-items: center;  
+    @include tablet {
+        padding: 4rem 0 3rem 0;
+        flex-direction: row; 
+        justify-content: space-around;
+    } 
+    @include desktop {
+        padding: 5rem;
+    }
+}
+
+#department-select {
+    padding-bottom: 1rem;
+    @include tablet {
+        padding-bottom: 0;
+    } 
+}
+
+#department-dropdown-selector {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.75rem;
+    @include tablet {
+        font-size: 1rem;
+    } 
+    @include desktop {
+        font-size: 1.5rem;
+    }
+}
+  
+button {
+    height: 1.25rem;
+    background-color: white;
+    font-family: Arial, Helvetica, sans-serif;
+    @include tablet {
+      height: 1.5rem;
+      font-size: 1rem;
+    } 
+    @include desktop {
+        height: 2rem;
+        width: 11rem;
+        font-size: 1.5rem;
+    } 
+}
+ 
+#gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+  }
+
+.card {
+    display: flex;
+    flex-direction: column;
+    //height: 10rem;
+    width: 10rem;
+    padding: 3rem;
+    border: white solid 1px;
+    margin: 1rem;  
+    object-fit: cover;
+    &__image {
+      width: 10rem;
+    }
+    &__info {
+        color: white;
+    }
+  }
+
+.card-hidden {
+    border: none;
+}
+
+.met-info {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(58, 55, 55);
+    font-size: 0.5rem;
+    line-height: 0.75rem;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    @include tablet {
+        font-size: 0.75rem;
+        line-height: 1rem;
+    } 
+    @include desktop {
+        font-size: 1rem;
+        line-height: 2rem;
+    }  
+}
+  
+a {
+    color: white;
+}
+  
+
