@@ -1,9 +1,17 @@
 class GalleryCard {
-    constructor(objectID) {
+    constructor(objectID, parentContainerDOM) {
         this.objectID = objectID;
 
+        this.parentContainerDOM = parentContainerDOM;
+
         // The default image in case we don't get anything.
-        this.primaryImageSmall = `https://collectionapi.metmuseum.org/api/collection/v1/iiif/395022/thumbnail`;
+        this.primaryImageSmall = `https://www.nexiq.com/Images/No_Image_Available.png`;
+
+        this.requestDataPromise = new Promise(this.requestData);
+        this.requestDataPromise.then(this.render)
+        .then(() => {
+            window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth"});
+        });
     }
 
     requestData = (resolve, reject) => {
@@ -81,15 +89,21 @@ class GalleryCard {
             </div>
         </section> */
 
-        return `
-        <div class="card">
-            <img class="card__image" src="${this.primaryImageSmall}">
-            <div class="card__info">
-                <p id="card__info--title">${this.title}</p>
-                <p id="card__info--year">${this.objectDate}</p>
-                <p id="card__info--artist">${this.artistDisplayName}</p>
+        const cardDOM = document.createElement('div');
+        cardDOM.classList.add("card");
+        cardDOM.innerHTML = `
+        <img class="card__image" src="${this.primaryImageSmall}">
+        <div class="card__info">
+            <p id="card__info-title" class="card__info-title">${this.title}</p>
+            <p id="card__info-year">${this.objectDate}</p>
+            <p id="card__info-artist">${this.artistDisplayName}</p>
+            <div class="card__info-link-container">
+                <a class="card__info-link" href="${this.objectURL}" target="_blank" rel="noopener noreferrer">Link to full information</a>
             </div>
-        </div>`;
+        </div>
+        `;
+
+        this.parentContainerDOM.appendChild(cardDOM);
     }
 }
 
@@ -98,24 +112,36 @@ class Gallery {
         this.parentContainerDOM = parentContainerDOM;
     }
 
+    clearGallery = () => {
+        this.parentContainerDOM.replaceChildren();
+    }
+
     populate = (listOfObjectIDs) => {
-        this.listOfObjectIDs = listOfObjectIDs;
+        if (listOfObjectIDs) {
+            this.listOfObjectIDs = Array.from(listOfObjectIDs);
+        }
 
         this.galleryCards = [];
 
         // Limit the number of cards to 5, or whichever is smaller
-        const smallerValue = (this.listOfObjectIDs.length > 5) ? 5 : this.listOfObjectIDs.length;
+        const totalCardDisplayed = (this.listOfObjectIDs.length > 5) ? 5 : this.listOfObjectIDs.length;
+        let randomObjectIDs = [];
 
-        for (let index = 0; index < smallerValue; index ++) {
-            this.galleryCards.push( (new GalleryCard(this.listOfObjectIDs[index])) );
+        while (randomObjectIDs.length < totalCardDisplayed) {
+            let randomObjectIndex = Math.floor(Math.random() * this.listOfObjectIDs.length);
+            let randomObjectID = this.listOfObjectIDs[randomObjectIndex];
+
+            if (!randomObjectIDs.includes(randomObjectID)) {
+                randomObjectIDs.push(randomObjectID)
+
+                this.listOfObjectIDs.splice(randomObjectIndex, 1);
+            }
         }
 
-        const requestDataMethods = this.galleryCards.map( x => new Promise(x.requestData));
+        randomObjectIDs.forEach( objectID => {
+            this.galleryCards.push( (new GalleryCard(objectID, this.parentContainerDOM)) );
+        });
 
-        Promise.all(requestDataMethods).then( (values)=>{
-            console.log(this.galleryCards);
-            this.render();
-        })
     }
 
     /**
@@ -129,7 +155,6 @@ class Gallery {
             cardHTMLRender.push(galleryCard.render());
         });
 
-        console.log(cardHTMLRender);
 
         return cardHTMLRender.join('');
     }

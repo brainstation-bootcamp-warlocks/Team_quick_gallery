@@ -46,6 +46,7 @@ class DropdownDepartment {
 
         return `    
         <select name="department" id="department-dropdown-selector">
+            <option value=-1 disabled selected hidden>Select a department</option>
             ${result.join('')}
         </select>`;
     }

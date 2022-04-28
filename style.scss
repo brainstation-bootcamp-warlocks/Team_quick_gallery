@@ -1,0 +1,116 @@
+body {
+    margin: 0;
+}
+
+.logo {
+    &__wrapper {
+        width: 100%;
+        background-color: #EC012A;
+        height: 7rem;
+    }
+    &__image {
+        margin-left: 5rem;
+        margin-top: 1rem;
+        width: 5rem;
+        height: 5rem;
+    }
+}
+
+ 
+.hero {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  &__image {
+      background-size: cover;
+      background-repeat: no-repeat;
+      opacity: 0.3;
+  }
+  &__title {
+    position: absolute;
+    font-size: 7rem;
+    color: rgb(58, 55, 55);
+    padding-left: 5rem;    
+  }
+}
+   
+main {
+  font-family: Arial, Helvetica, sans-serif;
+  align-items: center;
+  background-color: white;
+  // height: 30rem; 
+}
+  
+.selection {
+    padding: 5rem;
+    display: flex;
+    flex-direction: row;    
+    justify-content: space-evenly;
+}
+
+#department-dropdown-selector {
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1.5rem;
+  
+}
+
+button {
+  height: 2rem;
+  width: 11rem;
+  background-color: white;
+  font-size: 1.5rem;
+  font-family: Arial, Helvetica, sans-serif;
+  border-radius: 0.3rem;
+}
+ 
+  #gallery {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 0 0 5rem 0;
+    align-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  .card {
+    display: flex;
+    flex-direction: column;
+    //height: 10rem;
+    width: 15rem;
+    padding: 3rem;
+    border: rgb(58, 55, 55) solid 1px;
+    margin: 1rem;
+
+    &__image {
+      
+      // min-width: 15rem;
+      max-height: 15rem;
+      object-fit: contain;
+    //    background-image: linear-gradient(to top, rgb(58, 55, 55), white);
+    
+    }
+
+    &__info {
+        color: white;
+        color: rgb(51, 51, 51);
+
+      &--title {
+        font-weight: 600;
+      }
+
+      &--link {
+        text-decoration: none;
+        color: inherit;
+        font-style: italic;
+
+        &-container {
+          margin-top: 3rem;
+        }
+      }
+    }
+  }
+  
+

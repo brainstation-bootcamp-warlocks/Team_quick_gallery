@@ -4,8 +4,10 @@ let allImageUrl = [];
 let searchTotalRecords;
 let searchObjectIDs;
 
-let dropdownCulture;
+let existingDepartmentId;
 let gallery;
+
+let loadMoreButton;
 
 /**
  * When called, will request for a list of objects from the server.
@@ -14,28 +16,54 @@ let gallery;
 
     departmentId = dropdownDepartment.getSelectedDepartmentId();
 
-    axios.get('https://collectionapi.metmuseum.org/public/collection/v1/search', 
-    {
-        // Note: for some reason, the params must be in this ordering, with 'q' at the end
-        params: {
-            "departmentId": departmentId,
-            "hasImage": true,
-            "q": "\"\"",
-        }
-    }).then( response => {
-        const searchTotalRecords = response.data.total;
-        const searchObjectIDs = response.data.objectIDs;
-
-        // Now that we have the URLs for the gallery, populate and render them.
-        gallery.populate(searchObjectIDs);
+    // If the user hasn't picked anything.
+    if (departmentId === "-1") {
         
-    }).catch(error => {
-        console.error ("Failed to receive objects from API.");
-        console.error (error);
-    });
+        return;
+    }
+
+    // Only make this query if we switched departments
+    if (existingDepartmentId !== departmentId) {
+
+        axios.get('https://collectionapi.metmuseum.org/public/collection/v1/search', 
+        {
+            // Note: for some reason, the params must be in this ordering, with 'q' at the end
+            params: {
+                "departmentId": departmentId,
+                "hasImages": true,
+                "q": "\"\"",
+            }
+        }).then( response => {
+            searchTotalRecords = response.data.total;
+            searchObjectIDs = response.data.objectIDs;
+
+            existingDepartmentId = departmentId
+
+            // Now that we have the URLs for the gallery, populate and render them.
+            gallery.clearGallery();
+            gallery.populate(searchObjectIDs);
+
+            // Show the "Show more" button
+            loadMoreButton.classList.add("load-more__button--show");
+            
+            
+        }).catch(error => {
+            console.error ("Failed to receive objects from API.");
+            console.error (error);
+        });
+    } else {
+        // The list hasn't changed, so just render from the existing list.
+        gallery.populate();
+    }
+}
+
+function requestMoreObjects () {
+    requestGalleryObjects();
 }
 
 document.getElementById("getArt").addEventListener("click", requestGalleryObjects);
+loadMoreButton = document.getElementById("loadMore");
+loadMoreButton.addEventListener("click", requestMoreObjects);
 
 // Web components
 dropdownDepartment = new DropdownDepartment(document.getElementById("department-select"));

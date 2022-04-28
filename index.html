@@ -19,15 +19,19 @@
         <div class="hero">
             <img class="hero__image" src="./Assets/from-the-archives_teaser_1440x960.jpg" alt="old black and white photo of the Met">
             <div class="hero__title">Random art gallery</div>
-            <div class="hero__subtitle">Enjoy your random selection from more than two million works of art from around the world.<br>The Metropolitan Museum of Art is coming to you today!</div>
+            <div class="hero__subtitle">Enjoy your random selection from more than two million works of art from around the world<br></div>
         </div>
         <main>
             <div class="selection">
-                <div id="department-select"></div>
-                <button id="getArt">Select</button>
+                <div id="department-select">
+                    <select name="department" id="department-dropdown-selector">
+                        <option value=-1 disabled selected hidden>Select a department</option>
+                    </select>
+                </div>
+                <button id="getArt">Browse</button>
             </div>
             <section id="gallery">
-                <div class="card card-hidden">
+                <div class="card-hidden">
                     <div class="card__image"></div>
                     <div class="card__info">
                         <p id="card__info--title"></p>
@@ -36,6 +40,9 @@
                     </div>
                 </div>
             </section>
+            <div class="load-more">
+                <button id="loadMore" class="load-more__button">Load More</button>      
+            </div>   
         </main>         
         <footer class="met-info">
             For more information about the Metropolitan Museum of Art Collection API, please visit <a href="https://github.com/metmuseum/openaccess">Open Access Github page</a>. 
