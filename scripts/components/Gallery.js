@@ -117,9 +117,12 @@ class Gallery {
     }
 
     populate = (listOfObjectIDs) => {
-        this.listOfObjectIDs = listOfObjectIDs;
+        if (listOfObjectIDs) {
+            this.listOfObjectIDs = Array.from(listOfObjectIDs);
+        }
 
         this.galleryCards = [];
+        console.log(this.listOfObjectIDs);
 
         // Limit the number of cards to 5, or whichever is smaller
         const totalCardDisplayed = (this.listOfObjectIDs.length > 5) ? 5 : this.listOfObjectIDs.length;
@@ -131,21 +134,15 @@ class Gallery {
 
             if (!randomObjectIDs.includes(randomObjectID)) {
                 randomObjectIDs.push(randomObjectID)
+
+                this.listOfObjectIDs.splice(randomObjectIndex, 1);
             }
         }
-
-        console.log(randomObjectIDs);
 
         randomObjectIDs.forEach( objectID => {
             this.galleryCards.push( (new GalleryCard(objectID, this.parentContainerDOM)) );
         });
 
-        /* const requestDataMethods = this.galleryCards.map( x => new Promise(x.requestData));
-
-        Promise.all(requestDataMethods).then( (values)=>{
-            console.log(this.galleryCards);
-            this.render();
-        }) */
     }
 
     /**
@@ -159,7 +156,6 @@ class Gallery {
             cardHTMLRender.push(galleryCard.render());
         });
 
-        console.log(cardHTMLRender);
 
         return cardHTMLRender.join('');
     }

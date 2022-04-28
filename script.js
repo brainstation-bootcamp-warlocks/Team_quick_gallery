@@ -40,8 +40,8 @@ let gallery;
             console.error (error);
         });
     } else {
-        // The list hasn't changed - populate and render them.
-        gallery.populate(searchObjectIDs);
+        // The list hasn't changed, so just render from the existing list.
+        gallery.populate();
     }
 }
 
