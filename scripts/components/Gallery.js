@@ -94,7 +94,7 @@ class GalleryCard {
         cardDOM.innerHTML = `
         <img class="card__image" src="${this.primaryImageSmall}">
         <div class="card__info">
-            <p id="card__info--title">${this.title}</p>
+            <p id="card__info--title" class="card__info--title">${this.title}</p>
             <p id="card__info--year">${this.objectDate}</p>
             <p id="card__info--artist">${this.artistDisplayName}</p>
             <div class="card__info--link-container">
