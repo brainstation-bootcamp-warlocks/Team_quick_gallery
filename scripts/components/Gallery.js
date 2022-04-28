@@ -122,7 +122,6 @@ class Gallery {
         }
 
         this.galleryCards = [];
-        console.log(this.listOfObjectIDs);
 
         // Limit the number of cards to 5, or whichever is smaller
         const totalCardDisplayed = (this.listOfObjectIDs.length > 5) ? 5 : this.listOfObjectIDs.length;
