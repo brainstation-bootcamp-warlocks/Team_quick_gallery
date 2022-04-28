@@ -3,3 +3,6 @@
 
 #Ignore the font demonstrator file.
 demo.html
+
+#Ignore styling without mobile version
+style.scss

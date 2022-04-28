@@ -22,11 +22,20 @@ Next Stage:
 - [ ] Tony: Have it so that when you click on a card, it links to the actual page.
 
 Final Stage:
+<<<<<<< HEAD
 - [ ] Get rid of the empty card on the main page
 - [ ] Put in subtitle for the main hero banner
 - [ ] Would be nice to have footer
 - [ ] Mobile screen size (767px) breakpoint: Main title should be smaller
 - [ ] Mobile screen size (767px) breakpoint: Dropdown and select button is pushing the screen, creating white space.
 - [x] Change up cards so they look nicer
+=======
+- [x] Get rid of the empty card on the main page
+- [x] Put in subtitle for the main hero banner
+- [x] Would be nice to have footer
+- [x] Mobile screen size (767px) breakpoint: Main title should be smaller
+- [x] Mobile screen size (767px) breakpoint: Dropdown and select button is pushing the screen, creating white space.
+- [ ] Change up cards so they look nicer
+>>>>>>> main
 - [ ] have button style similar way as metmuseum
 - [ ] put in description for the dropdown (or put a placeholder property)
