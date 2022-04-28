@@ -4,7 +4,7 @@ let allImageUrl = [];
 let searchTotalRecords;
 let searchObjectIDs;
 
-let dropdownCulture;
+let existingDepartmentId;
 let gallery;
 
 /**
@@ -14,25 +14,35 @@ let gallery;
 
     departmentId = dropdownDepartment.getSelectedDepartmentId();
 
-    axios.get('https://collectionapi.metmuseum.org/public/collection/v1/search', 
-    {
-        // Note: for some reason, the params must be in this ordering, with 'q' at the end
-        params: {
-            "departmentId": departmentId,
-            "hasImage": true,
-            "q": "\"\"",
-        }
-    }).then( response => {
-        const searchTotalRecords = response.data.total;
-        const searchObjectIDs = response.data.objectIDs;
+    // Only make this query if we switched departments
+    if (existingDepartmentId !== departmentId) {
 
-        // Now that we have the URLs for the gallery, populate and render them.
+        axios.get('https://collectionapi.metmuseum.org/public/collection/v1/search', 
+        {
+            // Note: for some reason, the params must be in this ordering, with 'q' at the end
+            params: {
+                "departmentId": departmentId,
+                "hasImages": true,
+                "q": "\"\"",
+            }
+        }).then( response => {
+            searchTotalRecords = response.data.total;
+            searchObjectIDs = response.data.objectIDs;
+
+            existingDepartmentId = departmentId
+
+            // Now that we have the URLs for the gallery, populate and render them.
+            gallery.clearGallery();
+            gallery.populate(searchObjectIDs);
+            
+        }).catch(error => {
+            console.error ("Failed to receive objects from API.");
+            console.error (error);
+        });
+    } else {
+        // The list hasn't changed - populate and render them.
         gallery.populate(searchObjectIDs);
-        
-    }).catch(error => {
-        console.error ("Failed to receive objects from API.");
-        console.error (error);
-    });
+    }
 }
 
 document.getElementById("getArt").addEventListener("click", requestGalleryObjects);

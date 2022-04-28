@@ -12,7 +12,7 @@ Should be done:
 Nice to have:
 - [x] Tony: Have a dropdown wheel that gets populated by criteria (e.g. culture), and fill it up.
 - [x] Tony: Have it so that the dropdown wheel selection updates the selected culture variable.
-- [ ] Tony: Have it so that we can actually get more pages
+- [x] Tony: Have it so that we can actually get more pages
 
 Next Stage:
 - [x] Irina: In the main page, change up styling to resemble the metropolitan art museum page
@@ -27,6 +27,6 @@ Final Stage:
 - [ ] Would be nice to have footer
 - [ ] Mobile screen size (767px) breakpoint: Main title should be smaller
 - [ ] Mobile screen size (767px) breakpoint: Dropdown and select button is pushing the screen, creating white space.
-- [ ] Change up cards so they look nicer
+- [x] Change up cards so they look nicer
 - [ ] have button style similar way as metmuseum
 - [ ] put in description for the dropdown (or put a placeholder property)

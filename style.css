@@ -64,20 +64,20 @@ button {
   justify-content: space-evenly;
   flex-wrap: wrap;
   padding: 0 0 5rem 0;
+  align-content: flex-start;
+  align-items: stretch;
 }
 
 .card {
   display: flex;
   flex-direction: column;
-  width: 10rem;
+  width: 20%;
+  max-width: 15rem;
   padding: 3rem;
   border: white solid 1px;
   margin: 1rem;
   -o-object-fit: cover;
      object-fit: cover;
-}
-.card__image {
-  width: 10rem;
 }
 .card__info {
   color: white;

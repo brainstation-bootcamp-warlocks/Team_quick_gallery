@@ -1,9 +1,14 @@
 class GalleryCard {
-    constructor(objectID) {
+    constructor(objectID, parentContainerDOM) {
         this.objectID = objectID;
 
+        this.parentContainerDOM = parentContainerDOM;
+
         // The default image in case we don't get anything.
-        this.primaryImageSmall = `https://collectionapi.metmuseum.org/api/collection/v1/iiif/395022/thumbnail`;
+        this.primaryImageSmall = `https://www.nexiq.com/Images/No_Image_Available.png`;
+
+        this.requestDataPromise = new Promise(this.requestData);
+        this.requestDataPromise.then(this.render);
     }
 
     requestData = (resolve, reject) => {
@@ -81,15 +86,17 @@ class GalleryCard {
             </div>
         </section> */
 
-        return `
-        <div class="card">
-            <img class="card__image" src="${this.primaryImageSmall}">
-            <div class="card__info">
-                <p id="card__info--title">${this.title}</p>
-                <p id="card__info--year">${this.objectDate}</p>
-                <p id="card__info--artist">${this.artistDisplayName}</p>
-            </div>
+        const cardDOM = document.createElement('div');
+        cardDOM.classList.add("card");
+        cardDOM.innerHTML = `
+        <img class="card__image" src="${this.primaryImageSmall}">
+        <div class="card__info">
+            <p id="card__info--title">${this.title}</p>
+            <p id="card__info--year">${this.objectDate}</p>
+            <p id="card__info--artist">${this.artistDisplayName}</p>
         </div>`;
+
+        this.parentContainerDOM.appendChild(cardDOM);
     }
 }
 
@@ -98,24 +105,40 @@ class Gallery {
         this.parentContainerDOM = parentContainerDOM;
     }
 
+    clearGallery = () => {
+        this.parentContainerDOM.replaceChildren();
+    }
+
     populate = (listOfObjectIDs) => {
         this.listOfObjectIDs = listOfObjectIDs;
 
         this.galleryCards = [];
 
         // Limit the number of cards to 5, or whichever is smaller
-        const smallerValue = (this.listOfObjectIDs.length > 5) ? 5 : this.listOfObjectIDs.length;
+        const totalCardDisplayed = (this.listOfObjectIDs.length > 5) ? 5 : this.listOfObjectIDs.length;
+        let randomObjectIDs = [];
 
-        for (let index = 0; index < smallerValue; index ++) {
-            this.galleryCards.push( (new GalleryCard(this.listOfObjectIDs[index])) );
+        while (randomObjectIDs.length < totalCardDisplayed) {
+            let randomObjectIndex = Math.floor(Math.random() * this.listOfObjectIDs.length);
+            let randomObjectID = this.listOfObjectIDs[randomObjectIndex];
+
+            if (!randomObjectIDs.includes(randomObjectID)) {
+                randomObjectIDs.push(randomObjectID)
+            }
         }
 
-        const requestDataMethods = this.galleryCards.map( x => new Promise(x.requestData));
+        console.log(randomObjectIDs);
+
+        randomObjectIDs.forEach( objectID => {
+            this.galleryCards.push( (new GalleryCard(objectID, this.parentContainerDOM)) );
+        });
+
+        /* const requestDataMethods = this.galleryCards.map( x => new Promise(x.requestData));
 
         Promise.all(requestDataMethods).then( (values)=>{
             console.log(this.galleryCards);
             this.render();
-        })
+        }) */
     }
 
     /**
