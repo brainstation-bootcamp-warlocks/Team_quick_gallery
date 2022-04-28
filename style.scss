@@ -30,9 +30,21 @@ body {
     }
     &__title {
       position: absolute;
-      font-size: 7rem;
+      font-size: 8rem;
       color: rgb(58, 55, 55);
-      padding-left: 5rem;    
+      padding-left: 5rem;
+      padding-bottom: 3rem;    
+    }
+
+    &__subtitle {
+      position: absolute;
+      font-size: 2.5rem;
+      top: 60%;
+      padding-left: 5rem;
+      font-style: italic;
+      width: 80%;
+      line-height: 3rem;
+      
     }
   }
    
