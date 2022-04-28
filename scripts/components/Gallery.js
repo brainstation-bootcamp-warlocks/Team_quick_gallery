@@ -94,11 +94,11 @@ class GalleryCard {
         cardDOM.innerHTML = `
         <img class="card__image" src="${this.primaryImageSmall}">
         <div class="card__info">
-            <p id="card__info--title" class="card__info--title">${this.title}</p>
-            <p id="card__info--year">${this.objectDate}</p>
-            <p id="card__info--artist">${this.artistDisplayName}</p>
-            <div class="card__info--link-container">
-                <a class="card__info--link" href="${this.objectURL}" target="_blank" rel="noopener noreferrer">Link to full information</a>
+            <p id="card__info-title" class="card__info-title">${this.title}</p>
+            <p id="card__info-year">${this.objectDate}</p>
+            <p id="card__info-artist">${this.artistDisplayName}</p>
+            <div class="card__info-link-container">
+                <a class="card__info-link" href="${this.objectURL}" target="_blank" rel="noopener noreferrer">Link to full information</a>
             </div>
         </div>
         `;
