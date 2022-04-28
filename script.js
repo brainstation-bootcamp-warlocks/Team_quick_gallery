@@ -45,7 +45,12 @@ let gallery;
     }
 }
 
+function requestMoreObjects () {
+    requestGalleryObjects();
+}
+
 document.getElementById("getArt").addEventListener("click", requestGalleryObjects);
+document.getElementById("loadMore").addEventListener("click", requestMoreObjects);
 
 // Web components
 dropdownDepartment = new DropdownDepartment(document.getElementById("department-select"));

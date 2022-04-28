@@ -8,7 +8,10 @@ class GalleryCard {
         this.primaryImageSmall = `https://www.nexiq.com/Images/No_Image_Available.png`;
 
         this.requestDataPromise = new Promise(this.requestData);
-        this.requestDataPromise.then(this.render);
+        this.requestDataPromise.then(this.render)
+        .then(() => {
+            window.scrollTo({ left: 0, top: document.body.scrollHeight, behavior: "smooth"});
+        });
     }
 
     requestData = (resolve, reject) => {
