@@ -65,14 +65,14 @@ button {
   flex-wrap: wrap;
   padding: 0 0 5rem 0;
   align-content: flex-start;
-  align-items: stretch;
+  align-items: flex-start;
 }
 
 .card {
   display: flex;
   flex-direction: column;
   width: 20%;
-  max-width: 15rem;
+  width: 15rem;
   padding: 3rem;
   border: white solid 1px;
   margin: 1rem;
@@ -81,4 +81,11 @@ button {
 }
 .card__info {
   color: white;
+}
+.card__info--link {
+  text-decoration: none;
+  color: inherit;
+}
+.card__info--link-container {
+  margin-top: 3rem;
 }/*# sourceMappingURL=style.css.map */

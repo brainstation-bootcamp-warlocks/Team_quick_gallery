@@ -97,7 +97,11 @@ class GalleryCard {
             <p id="card__info--title">${this.title}</p>
             <p id="card__info--year">${this.objectDate}</p>
             <p id="card__info--artist">${this.artistDisplayName}</p>
-        </div>`;
+            <div class="card__info--link-container">
+                <a class="card__info--link" href="${this.objectURL}" target="_blank" rel="noopener noreferrer">Link to full information</a>
+            </div>
+        </div>
+        `;
 
         this.parentContainerDOM.appendChild(cardDOM);
     }
