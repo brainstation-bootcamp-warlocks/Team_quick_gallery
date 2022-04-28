@@ -26,16 +26,21 @@
                 <button id="getArt">Select</button>
             </div>
             <section id="gallery">
-                <div class="card">
+                <div class="card card-hidden">
                     <div class="card__image"></div>
                     <div class="card__info">
-                        <p id="card__info--title">title</p>
-                        <p id="card__info--year">year</p>
-                        <p id="card__info--artist">artist</p>
+                        <p id="card__info--title"></p>
+                        <p id="card__info--year"></p>
+                        <p id="card__info--artist"></p>
                     </div>
                 </div>
             </section>
-        </main>            
+        </main>         
+        <footer class="met-info">
+            For more information about the Metropolitan Museum of Art Collection API, please visit our <a href="https://github.com/metmuseum/openaccess">Open Access Github page</a>. 
+            <br>
+            The use of the Metropolitan Museum of Art Collection API is subject to these <a href="https://www.metmuseum.org/information/terms-and-conditions">terms and conditions</a>.
+        </footer>   
 
         <script src="./scripts/components/Gallery.js"></script>
         <script src="./scripts/components/DropdownDepartment.js"></script>

@@ -73,6 +73,8 @@ body {
     padding: 0 0 5rem 0;
   }
   
+ 
+
   .card {
     display: flex;
     flex-direction: column;
@@ -86,15 +88,31 @@ body {
 
     &__image {
       width: 10rem;
-      // height: 11rem;
-    //    background-image: linear-gradient(to top, rgb(58, 55, 55), white);
-    
     }
 
     &__info {
         color: white;
 
     }
+  }
+
+  .card-hidden {
+    border: none;
+  }
+
+  .met-info {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: rgb(58, 55, 55);
+    font-size: 1rem;
+    line-height: 2rem;
+    color: white;
+    padding: 2rem;
+    text-align: center;
+    
+  }
+  
+  a {
+    color: white;
   }
   
 
