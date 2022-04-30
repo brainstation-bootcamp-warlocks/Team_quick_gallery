@@ -8,7 +8,7 @@ body {
     &__wrapper {
         width: 100%;
         background-color: #EC012A;
-        height: 3.5rem;
+        height: 4.25rem;
         @include tablet {
             height: 7rem;
           }   
@@ -16,8 +16,8 @@ body {
     &__image {
         margin-left: 2rem;
         margin-top: 0.75rem;
-        width: 2rem;
-        height: 2rem;
+        width: 3rem;
+        height: 3rem;
         @include tablet {
             width: 5rem;
             height: 5rem;
@@ -52,11 +52,10 @@ body {
       font-size: 4rem;
       color: rgb(58, 55, 55);
       padding-left: 2rem;
-      padding-top: 3rem;
+      padding-top: 10rem;
       @include tablet {
-        font-size: 4rem;
-        padding-left: 4rem;
-        padding-bottom: 3rem;
+        font-size: 5rem;
+        padding: 3rem 0 3rem 4rem;
       }   
       @include desktop {
         font-size: 8rem;
@@ -65,10 +64,9 @@ body {
 
     &__subtitle {
       position: absolute;
-      font-size: 1rem;
-      top: 45%;
+      font-size: 1.5rem;
+      top: 50%;
       padding-left: 2rem;
-      //font-style: italic;
       font-family: Helvetica, sans-serif;
       width: 80%;
       @include tablet {
@@ -77,9 +75,13 @@ body {
         padding-left: 4rem;
         font-weight: 500;
         line-height: 3rem;
+        width: 60%;
       } 
       @include desktop {
         font-size: 2.5rem;
+        padding-top: 5rem;
+        width: 60%;
+        line-height: 4rem;
       }
     }
   }

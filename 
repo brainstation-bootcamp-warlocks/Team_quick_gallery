@@ -1,0 +1,270 @@
+[33mcommit 4dc6353669b8afe40ca3ea91c41f0c28fb3d3ce6[m[33m ([m[1;36mHEAD -> [m[1;32mIrinaNew[m[33m)[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Thu Apr 28 13:40:21 2022 -0700
+
+    Responsive design and files structure updated
+
+[33mcommit 7cf9288f3d83f71b23112becaf80c89a62c7b154[m[33m ([m[1;31morigin/IrinaNew[m[33m)[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Thu Apr 28 11:52:09 2022 -0700
+
+    Subtitle and new image
+
+[33mcommit 19227fd4f32d4dcd1baad6434eb3a00f8abc3f9e[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Thu Apr 28 11:27:38 2022 -0700
+
+    Added footer and removed empty card
+
+[33mcommit d1f5e4d40ce4bd1399445ed8ddc86188a0d6e5f0[m[33m ([m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m, [m[1;32mmain[m[33m)[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Thu Apr 28 12:43:55 2022 -0400
+
+    Updated task list
+
+[33mcommit ef5a8f925a51967b292c51edd57e6bd479af9c7e[m
+Merge: 86dcc4f d1bf4a0
+Author: Tony Li <tony.li.email@gmail.com>
+Date:   Wed Apr 27 14:58:29 2022 -0400
+
+    Merge pull request #6 from brainstation-bootcamp-warlocks/tony-dev
+    
+    Tony dev
+
+[33mcommit d1bf4a0cc3f3639e0b31402edc6893371d7c2515[m[33m ([m[1;31morigin/tony-dev[m[33m)[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Wed Apr 27 14:57:34 2022 -0400
+
+    Added a .gitignore file for the SASS map file.
+
+[33mcommit 9da055b9c6c7c2d7eacbc2babeceddeb7922d674[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Wed Apr 27 14:57:04 2022 -0400
+
+    Added some visual changes to make the cards look a bit better.
+
+[33mcommit da80525f09e77e2e199462f224545acef1e0cd7e[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Wed Apr 27 14:45:15 2022 -0400
+
+    Linked with Irinia's new UI revision.
+
+[33mcommit adc58754cc50fc365b5954c5fbbfdbb0e5c6a0a8[m
+Merge: 1bbc7ef 86dcc4f
+Author: Tony Li <tony.li.email@gmail.com>
+Date:   Wed Apr 27 14:41:07 2022 -0400
+
+    Merge branch 'main' into tony-dev
+
+[33mcommit 86dcc4f95f5ee6b4e2189300adb0e22d23e56260[m
+Merge: 9b5b215 9305382
+Author: Tony Li <tony.li.email@gmail.com>
+Date:   Wed Apr 27 14:37:22 2022 -0400
+
+    Merge pull request #7 from brainstation-bootcamp-warlocks/IrinaNew
+    
+    Irina new
+
+[33mcommit 9305382419ce22ed3297cb95a811290ba31abc07[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Wed Apr 27 10:16:58 2022 -0700
+
+    Added gallery styling
+
+[33mcommit 578e8c3fccbae26229ab264236af323c18f84a44[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Wed Apr 27 09:44:57 2022 -0700
+
+    Added BEM and SCSS
+
+[33mcommit 1bbc7efe6d5a8f20ec8ec8a5994c1ede1bf83675[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Tue Apr 26 23:52:03 2022 -0400
+
+    Address another copyright image format.
+
+[33mcommit 9a7faa8a5c75b34f0e53e301d4236a7cc745b5a0[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Tue Apr 26 23:45:14 2022 -0400
+
+    Integrating with Irina's UI changes.
+
+[33mcommit 3a822fac628a9ad270efafbe9e2dc1bf11bf1bae[m
+Merge: 27e7285 9b5b215
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Tue Apr 26 23:40:55 2022 -0400
+
+    Merge branch 'main' into tony-dev
+
+[33mcommit 27e728593bcce3c991815ca4ee1d4729a09512f4[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Tue Apr 26 23:40:35 2022 -0400
+
+    Working integration of Metropolitan museum API.
+
+[33mcommit abddb7245dc672dd66ae9626bfaf13a4550c6e0a[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Tue Apr 26 21:56:32 2022 -0400
+
+    Prelim changes -> render not working yet
+
+[33mcommit 9b5b215bcfad567ac5edd366733b263dafa0292e[m
+Merge: 93875bf 5f84593
+Author: Tony Li <tony.li.email@gmail.com>
+Date:   Tue Apr 26 21:55:47 2022 -0400
+
+    Merge pull request #5 from brainstation-bootcamp-warlocks/IrinaNew
+    
+    Added styling to resemble met page
+
+[33mcommit 5f84593a5f17178f1aa6817960a1f19484de985f[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Tue Apr 26 18:47:27 2022 -0700
+
+    Added styling to resemble met page
+
+[33mcommit 93875bf57bb5aa24cc77d4655223cdd15c91a143[m
+Merge: 3fccf54 0700092
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Tue Apr 26 20:50:46 2022 -0400
+
+    Merge branch 'main' of github.com:brainstation-bootcamp-warlocks/Team_quick_gallery
+
+[33mcommit 3fccf548c916185de04f1114973e67b29bfb36d2[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Tue Apr 26 20:50:32 2022 -0400
+
+    Updated readme with more work items.
+
+[33mcommit 07000922881aa2bd218668cb7bda59cd51f93361[m
+Merge: 02f5607 0d771db
+Author: IrinaPresnyakova <91635867+IrinaPresnyakova@users.noreply.github.com>
+Date:   Mon Apr 25 19:14:17 2022 -0700
+
+    Merge pull request #4 from brainstation-bootcamp-warlocks/tony-dev
+    
+    Integrated gallery and image URLs.
+
+[33mcommit 0d771db132c5f85dbc668f9843a36e1ee1d839ea[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Mon Apr 25 21:05:42 2022 -0400
+
+    Integrated gallery and image URLs.
+
+[33mcommit 02f5607fe6277b65c8293ff7036917ab5648323f[m
+Merge: c27e583 339eeea
+Author: Tony Li <tony.li.email@gmail.com>
+Date:   Mon Apr 25 20:05:11 2022 -0400
+
+    Merge pull request #3 from brainstation-bootcamp-warlocks/IrinaNew
+    
+    Irina new
+
+[33mcommit 339eeea321996f111300af773a8a6f83782783d7[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Mon Apr 25 16:56:03 2022 -0700
+
+    Attempting to render images on page
+
+[33mcommit 530ee564d27972ec0f671a3d0f390c4c7c686ad4[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Mon Apr 25 16:45:55 2022 -0700
+
+    Some styling added to the page
+
+[33mcommit 4114cbef5a8542a9d6b0f0c61ae7bd92452fe3de[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Mon Apr 25 15:59:21 2022 -0700
+
+    Card created
+
+[33mcommit 889fddfcf28b8e6066a6781d27334088fd491606[m
+Merge: 1f81366 c27e583
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Mon Apr 25 15:06:54 2022 -0700
+
+    updating
+
+[33mcommit c27e583e9cf987dbe249c9db7624e959fb5c27f8[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Mon Apr 25 01:03:34 2022 -0400
+
+    Added the culture dropdown selection.
+
+[33mcommit 11e4392a0ffdcc24db9d5285134cd8bba489a052[m
+Merge: 86b266c fd995ff
+Author: Tony Li <tony.li.email@gmail.com>
+Date:   Sat Apr 23 18:03:20 2022 -0400
+
+    Merge pull request #2 from brainstation-bootcamp-warlocks/tony-dev
+    
+    Tony dev
+
+[33mcommit fd995ffa980dfcacd31cfa4373090379c1d06581[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Sat Apr 23 18:02:53 2022 -0400
+
+    Updated readme with tasks properly.
+
+[33mcommit b7122b417750b32bad66fe7ba529141340bde367[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Sat Apr 23 18:01:50 2022 -0400
+
+    Updated readme with tasks.
+
+[33mcommit 1f81366b4f7bbda33ff886a8e3eee32901d3d935[m[33m ([m[1;31morigin/Irina[m[33m, [m[1;32mIrina[m[33m)[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Sat Apr 23 14:33:02 2022 -0700
+
+    Test with axios
+
+[33mcommit 86b266c53c9099a42d3190be4f7e1902ff4cc662[m
+Merge: 90df0dd b5b6870
+Author: Tony Li <tony.li.email@gmail.com>
+Date:   Sat Apr 23 17:31:45 2022 -0400
+
+    Merge pull request #1 from brainstation-bootcamp-warlocks/tony-dev
+    
+    Main button now is able to request list of images.
+
+[33mcommit b5b6870dd0099a39076bd1c1a8b95039b67bc26b[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Sat Apr 23 17:30:24 2022 -0400
+
+    Main button now is able to request list of images.
+
+[33mcommit a1a2ce523a5d46c03973a64842811192b276975f[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Sat Apr 23 14:00:30 2022 -0700
+
+    Some changes
+
+[33mcommit 90df0dd93828630bb59c4a912be8cc9e9e16dd76[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Sat Apr 23 16:54:47 2022 -0400
+
+    Added a test data object
+
+[33mcommit 02c517ba4f1e08fe060f93098a540bda20dfc867[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Sat Apr 23 13:12:56 2022 -0700
+
+    Basic styling applied
+
+[33mcommit 012110536f1438015a764a19c61849db012f8a4b[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Sat Apr 23 13:04:31 2022 -0700
+
+    html file
+
+[33mcommit 1794785b52246f1e5092cf9e8bb3de143b83238d[m
+Author: Irina Presnyakova <ipresnyakova@gmail.com>
+Date:   Sat Apr 23 13:03:06 2022 -0700
+
+    Create new files
+
+[33mcommit 32beda68cb37ddcb0134e1295b1f88945dda64a0[m
+Author: tonyliaccount@github.com <tony.li.email@gmail.com>
+Date:   Sat Apr 23 15:54:58 2022 -0400
+
+    first commit
